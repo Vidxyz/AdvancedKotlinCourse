@@ -8,6 +8,11 @@ class Response(var contents: String, var status: Status) {
 
     }
 
+    // Similar to scala's apply method
+    operator fun invoke(status: Status.() -> Unit) {
+
+    }
+
 }
 
 class Status(var code: Int, var description: String)
@@ -45,6 +50,13 @@ fun main() {
                 code = 404
                 description = "Not found"
             }
+        }
+
+
+        // This works cuz of operator invoke overload
+        response {
+                code = 404
+                description = "Not found"
         }
     }
 
