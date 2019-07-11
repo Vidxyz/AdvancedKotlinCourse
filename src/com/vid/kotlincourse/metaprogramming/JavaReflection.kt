@@ -2,7 +2,7 @@ package com.vid.kotlincourse.metaprogramming
 
 import java.lang.reflect.Type
 
-class Transaction(val id: Int, val amount: Double, var description: String) {
+class Transaction(val id: Int, val amount: Double, var description: String = "") {
 
     fun validate() {
         if(amount > 10000) {
