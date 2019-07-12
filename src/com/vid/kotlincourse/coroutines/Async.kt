@@ -12,6 +12,8 @@ private fun startLongAsyncOperation(v: Int) =
 fun main() {
 
     // async await keywords not found...
-
-
+    // Need kotlinx dependency via gradle
+    // yield allows us to suspend execution at some point and return to main "thread
+    // asyncRx also not found  here, need additionnal dependency
+    // `
 }
